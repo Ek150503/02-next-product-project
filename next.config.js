@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+  reactStrictMode: false,
+  images: {
+    domains: ["v5.airtableusercontent.com"],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

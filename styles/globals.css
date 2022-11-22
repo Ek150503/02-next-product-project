@@ -1,26 +1,201 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap");
 
 * {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+/* body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+/* navbar */
+.navbar {
+  padding: 0 1rem;
+  background-color: black;
+  display: flex;
+  max-width: 100vw;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+.navbar h3 {
+  font-size: 1rem;
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  /* background-color: blue; */
+  /* height: 100%; */
+}
+
+ul li {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.7rem;
+}
+/* home page */
+.Home {
+  max-width: 100vw;
+  height: calc(100vh - 40px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* product page */
+.data-container {
+  margin: 0 auto;
+  padding: 1rem 3rem;
+  /* width: 100vw; */
+  max-width: 1064px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 1.5rem;
+  column-gap: 0.5rem;
+}
+
+.title {
+  font-size: 1rem;
+  grid-column: span 5;
+}
+
+img {
+  width: 100%;
+  height: 100px;
+  /* height: auto; */
+  object-fit: cover;
+}
+
+.data-article h4 {
+  margin-bottom: 0.2rem;
+  font-size: 0.7rem;
+}
+
+.data-article p {
+  font-size: 0.7rem;
+  margin-bottom: 0.3rem;
+}
+
+.data-article .btn {
+  text-decoration: none;
+  font-size: 0.7rem;
+  /* border: 1px solid ; */
+}
+
+/* sinleProduct page */
+.single_product {
+  padding: 0 1rem;
+  max-width: 100vw;
+  height: calc(100vh-40px);
+  margin: 1.5rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  justify-items: center;
+  align-items: center;
+}
+
+.single_product .single_product_left {
+  width: 100%;
+  height: 100%;
+}
+
+.single_product .single_product_left .img {
+  width: 100%;
+  height: 250px;
+}
+
+.single_product .single_product_right h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.single_product .single_product_right .amount {
+  font-size: 0.6rem;
+  margin-bottom: 0.7rem;
+  color: red;
+}
+
+.single_product .single_product_right .dsc {
+  font-size: 0.7rem;
+}
+
+button {
+  border-radius: 1px;
+  margin-top: 1rem;
+  padding: 0.3rem 1.2rem;
+  border: 1px solid darkcyan;
+  background-color: darkcyan;
+  transition: all 0.15s;
+  color: #fff;
+}
+
+button:hover {
+  color: darkcyan;
+  border: 1px solid darkcyan;
+  background-color: #fff;
+}
+
+/* media */
+
+@media screen and (max-width: 732px) {
+  .data-container {
+    grid-template-columns: repeat(4, 1fr);
   }
-  body {
-    color: white;
-    background: black;
+  .title {
+    grid-column: span 4;
   }
+}
+@media screen and (max-width: 584px) {
+  .data-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .title {
+    grid-column: span 3;
+  }
+  .single_product {
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 427px) {
+  .data-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .title {
+    grid-column: span 2;
+  }
+  .link {
+    font-size: 0.55rem;
+  }
+
+  .navbar h3 {
+    font-size: 0.7rem;
+  }
+}
+
+@media screen and (max-width: 302px) {
+  .data-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .title {
+    grid-column: span 1;
+  }
+
+  /* 302 */
 }
