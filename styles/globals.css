@@ -175,10 +175,10 @@ button:hover {
 }
 @media screen and (max-width: 427px) {
   .data-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
   .title {
-    grid-column: span 2;
+    grid-column: span 1;
   }
   .link {
     font-size: 0.55rem;
@@ -187,15 +187,4 @@ button:hover {
   .navbar h3 {
     font-size: 0.7rem;
   }
-}
-
-@media screen and (max-width: 302px) {
-  .data-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .title {
-    grid-column: span 1;
-  }
-
-  /* 302 */
 }
