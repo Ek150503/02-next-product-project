@@ -152,6 +152,15 @@ button:hover {
   border: 1px solid darkcyan;
   background-color: #fff;
 }
+/* loading */
+
+.loading {
+  width: 100vw;
+  height: calc(100vh - 40px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* media */
 

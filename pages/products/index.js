@@ -20,26 +20,30 @@ const HomePage = () => {
     fetchData();
   }, []);
 
-  return (
-    <div className='data-container'>
-      <h2 className='title'>Products</h2>
-      {data.map((product) => {
-        const { id, name, image, category } = product;
-        return (
-          <div className='data' key={id}>
-            <img src={image} alt={name} className='img' />
-            <div className='data-article'>
-              <h4>{category}</h4>
-              <p>{name}</p>
-              <Link href={`products/${id}`} className='btn'>
-                Details
-              </Link>
+  if (data.length > 0) {
+    return (
+      <div className='data-container'>
+        <h2 className='title'>Products</h2>
+        {data.map((product) => {
+          const { id, name, image, category } = product;
+          return (
+            <div className='data' key={id}>
+              <img src={image} alt={name} className='img' />
+              <div className='data-article'>
+                <h4>{category}</h4>
+                <p>{name}</p>
+                <Link href={`products/${id}`} className='btn'>
+                  Details
+                </Link>
+              </div>
             </div>
-          </div>
-        );
-      })}
-    </div>
-  );
+          );
+        })}
+      </div>
+    );
+  } else {
+    return <div className='loading'>Loading....</div>;
+  }
 };
 
 export default HomePage;
